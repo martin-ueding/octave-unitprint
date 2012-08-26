@@ -20,15 +20,17 @@
 #
 # Prints the associated value and error with the given unit.
 #
-# It assumes that there is a @var{val}.key in the struct @var{data} that is
-# given as a parameter. If there is a @var{unit}, that will be displayed. If
-# there is a @var{err} key, it will be displayed with the relative error. If
-# @var{lit} it given, the deviation from the literature value is calculated and
-# displayed also. If @var{err} is present, it will be checked, whether the
-# measurement is close enough to the literature value. If so, it will display a
-# checkmark, a cross otherwise.
+# It assumes that there is a @var{data.val} in the struct @var{data} that is
+# given as a parameter. If there is a @var{data.unit}, that will be displayed.
+# If there is a @var{data.err} key, it will be displayed with the relative
+# error.
 #
-# It will print data like this::
+# If @var{data.lit} it given, the deviation from the literature value is
+# calculated and displayed also. If @var{data.err} is present, it will be
+# checked, whether the measurement is close enough to the literature value. If
+# so, it will display a checkmark, a cross otherwise.
+#
+# It will print data like this:
 #
 # @code{name = value \pm error (relative error) unit [deviation checkmark]}
 #
